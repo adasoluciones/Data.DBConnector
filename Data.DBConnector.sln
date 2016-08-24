@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.DBConnector", "Source\Data.DBConnector.csproj", "{BC259140-719B-438A-B902-60B120A51B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{385771DF-39F0-4290-A8D0-8408A712DCD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC259140-719B-438A-B902-60B120A51B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC259140-719B-438A-B902-60B120A51B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC259140-719B-438A-B902-60B120A51B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC259140-719B-438A-B902-60B120A51B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385771DF-39F0-4290-A8D0-8408A712DCD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385771DF-39F0-4290-A8D0-8408A712DCD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385771DF-39F0-4290-A8D0-8408A712DCD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385771DF-39F0-4290-A8D0-8408A712DCD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://cangrihack-w10:8080/tfs/ada%20framework
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Source\\Data.DBConnector.csproj
+		SccProjectName1 = Source
+		SccLocalPath1 = Source
+		SccProjectUniqueName2 = UnitTestProject1\\UnitTestProject1.csproj
+		SccProjectName2 = UnitTestProject1
+		SccLocalPath2 = UnitTestProject1
+	EndGlobalSection
+EndGlobal

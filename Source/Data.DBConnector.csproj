@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC259140-719B-438A-B902-60B120A51B9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ada.Framework.Data.DBConnector</RootNamespace>
+    <AssemblyName>DBConnector</AssemblyName>
+    <AssemblyName>Data.DBConnector</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\Data.DBConnector.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\Data.DBConnector.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Data.DBConnector.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Data.Json, Version=1.0.0.0, Culture=neutral, PublicKeyToken=934fe684c1a6c072, processorArchitecture=MSIL">
+      <HintPath>..\packages\Data.Json.1.0.0.0\lib\net35\Data.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=f8f7920de1ae00a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Framework.Configuration.1.2.0.0\lib\net35\Framework.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=1a9f741adb8945ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Framework.Core.1.1.0.0\lib\net35\Framework.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+    <Reference Include="Util.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=13413504944a6ec8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Util.Core.1.0.0.0\lib\net35\Util.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Util.FileMonitor, Version=1.0.2.1, Culture=neutral, PublicKeyToken=cce9a8bd2757fac3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Util.FileMonitor.1.0.2.1\lib\net35\Util.FileMonitor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Util.Object, Version=1.0.2.0, Culture=neutral, PublicKeyToken=f724ee3e342f3128, processorArchitecture=MSIL">
+      <HintPath>..\packages\Util.Object.1.0.2.0\lib\net35\Util.Object.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionBaseDatosFactory.cs" />
+    <Compile Include="Connections\ConfiguracionBaseDatos.cs" />
+    <Compile Include="Connections\ConfiguracionBaseDatosFactory.cs" />
+    <Compile Include="Connections\Entities\ConectorTO.cs" />
+    <Compile Include="Connections\Entities\ConfiguracionTO.cs" />
+    <Compile Include="Connections\Exceptions\ConfiguracionBaseDatosException.cs" />
+    <Compile Include="Connections\IConfiguracionBaseDatos.cs" />
+    <Compile Include="Entities\DataBase\ConexionTO.cs" />
+    <Compile Include="Entities\Parameter\ColeccionParametroSql.cs" />
+    <Compile Include="Entities\Parameter\ParametroSql.cs" />
+    <Compile Include="Entities\Parameter\Tabla.cs" />
+    <Compile Include="Entities\Query\RespuestaEjecucion.cs" />
+    <Compile Include="Exceptions\DBConnectorException.cs" />
+    <Compile Include="Exceptions\EjecutarException.cs" />
+    <Compile Include="Exceptions\ConexionException.cs" />
+    <Compile Include="ConexionBaseDatos.cs" />
+    <Compile Include="Exceptions\PreparacionException.cs" />
+    <Compile Include="Mapper\MapeadorDeObjetos.cs" />
+    <Compile Include="Mapper\IQueryCreator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\DynamicQuery.cs" />
+    <Compile Include="Queries\DynamicQueryConfig\DynamicQueryManager.cs" />
+    <Compile Include="Queries\DynamicQueryConfig\DynamicQueryRoot.cs" />
+    <Compile Include="Queries\DynamicQueryConfig\QueryTag.cs" />
+    <Compile Include="Queries\DynamicQueryConfig\DynamicQueryTag.cs" />
+    <Compile Include="Queries\Query.cs" />
+    <Compile Include="Queries\SP\ProcedimientoAlmacenado.cs" />
+    <Compile Include="SqlServer\ConexionBaseDatos.cs" />
+    <Compile Include="SqlServer\Mapper\MapeadorDeObjetos.cs" />
+    <Compile Include="SqlServer\Mapper\QueryCreator.cs" />
+    <Compile Include="SqlServer\Queries\Query.cs" />
+    <Compile Include="SqlServer\Queries\SP\ProcedimientoAlmacenado.cs" />
+    <Compile Include="SqlServer\Transaction\Transaccion.cs" />
+    <Compile Include="Transaction\Transaccion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data.DBConnector.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
